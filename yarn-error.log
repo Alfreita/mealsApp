@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add expo-fonts
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-natigation
 
 PATH: 
   C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\helm\windows-amd64;C:\Program Files\IBM\Cloud\bin;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Program Files (x86)\Yarn\bin\;C:\tools\php74;;C:\ProgramData\ComposerSetup\bin;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.3\bin;C:\Program Files (x86)\dotnet\;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\VictorAlmeidadeFreit\AppData\Local\Microsoft\WindowsApps;C:\Users\VictorAlmeidadeFreit\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\VictorAlmeidadeFreit\AppData\Local\Android\Sdk\platform-tools;C:\Users\VictorAlmeidadeFreit\.dotnet\tools;C:\Users\VictorAlmeidadeFreit\AppData\Local\Microsoft\WindowsApps;C:\Users\VictorAlmeidadeFreit\AppData\Local\Yarn\bin;C:\Users\VictorAlmeidadeFreit\AppData\Roaming\Composer\vendor\bin;C:\Users\VictorAlmeidadeFreit\.dotnet\tools;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\bin;C:\Users\VictorAlmeidadeFreit\AppData\Roaming\npm;C:\Users\VictorAlmeidadeFreit\AppData\Local\Box\Box Edit\
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/expo-fonts: Not found
+  Error: https://registry.yarnpkg.com/react-natigation: Not found
       at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66096:18)
       at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140748:22)
       at Request.emit (node:events:369:20)
@@ -39,6 +39,7 @@ npm manifest:
     "dependencies": {
       "expo": "~41.0.1",
       "expo-app-loading": "^1.0.3",
+      "expo-font": "~9.1.0",
       "expo-status-bar": "~1.0.4",
       "react": "16.13.1",
       "react-dom": "16.13.1",
