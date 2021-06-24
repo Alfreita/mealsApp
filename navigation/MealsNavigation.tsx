@@ -8,7 +8,7 @@ const MealsNavigation = createStackNavigator({
   Categories: {
     screen: CategorieScreen,
   },
-  CategoryMeal: {
+  CategoryMeals: {
     screen: CategoryMeals,
   },
   MealDetail: {
