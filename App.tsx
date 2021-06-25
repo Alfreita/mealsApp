@@ -4,7 +4,8 @@ import { StyleSheet, Text, View } from "react-native";
 import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
 import MealsNavigation from "./navigation/MealsNavigation";
-
+import { enableScreens } from "react-native-screens";
+enableScreens(true);
 const fetchFont = async () => {
   Font.loadAsync({
     "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
