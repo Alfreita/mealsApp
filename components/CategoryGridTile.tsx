@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   Text,
   TouchableNativeFeedback,
-  Platform,
+  Platform, 
 } from "react-native";
 
 const CategoryGridTile = (props: any) => {
