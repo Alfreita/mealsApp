@@ -12,10 +12,11 @@ const MealsDetail = (props: any) => {
   );
 };
 MealsDetail.navigationOptions = (navigationData: any) => {
-  const mealId = navigationData.navigation.getParam("categoryId");
+  const mealId = navigationData.navigation.getParam("mealId");
   const selectedMeal = MEALS.find((meal: any) => meal.id === mealId);
   return {
     headerTitle: selectedMeal?.title,
+    headerRight: () => <Text>FAV!</Text>,
   };
 };
 const styles = StyleSheet.create({
