@@ -53,7 +53,7 @@ const FiltersNavigation = createStackNavigator(
       screen: FiltersScreen,
     },
   },
-  { navigationOptions: stackScreenConfig }
+  { defaultNavigationOptions: stackScreenConfig }
 );
 
 const tabScreenConfig = {
@@ -95,6 +95,16 @@ const MainNavigator = createDrawerNavigator(
     MealsFavs: MealsFavTabNavigator,
     Filters: FiltersNavigation,
   },
-  {}
+  {
+    contentOptions: {
+      activeTintColor: "#e91e63",
+      itemsContainerStyle: {
+        marginVertical: 100,
+      },
+      iconContainerStyle: {
+        opacity: 1,
+      },
+    },
+  }
 );
 export default createAppContainer(MainNavigator);
