@@ -92,17 +92,23 @@ const MealsFavTabNavigator =
 
 const MainNavigator = createDrawerNavigator(
   {
-    MealsFavs: MealsFavTabNavigator,
+    MealsFavs: {
+      screen: MealsFavTabNavigator,
+      navigationOptions: {
+        drawerLabel: "Meals",
+      },
+    },
     Filters: FiltersNavigation,
   },
   {
     contentOptions: {
-      activeTintColor: "#e91e63",
+      activeTintColor: Colors.primaryColor,
       itemsContainerStyle: {
         marginVertical: 100,
       },
       iconContainerStyle: {
         opacity: 1,
+        
       },
     },
   }
