@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { CATEGORIES } from "../data/dummy-data";
 import CategoryGridTile from "../components/CategoryGridTile";
-const Categories = (props: any) => {
+const CategoriesScreen = (props: any) => {
   const renderGridItem = (itemData: any) => {
     return (
       <CategoryGridTile
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
-export default Categories;
+export default CategoriesScreen;

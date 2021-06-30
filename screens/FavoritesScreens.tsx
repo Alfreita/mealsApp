@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const Favorite = (props: any) => {
+const FavoriteScreen = (props: any) => {
   return (
     <View style={styles.screen}>
       <Text>The Favorite Screens</Text>
@@ -15,4 +15,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
-export default Favorite;
+export default FavoriteScreen;

@@ -2,7 +2,8 @@ import React from "react";
 import { View, Text, StyleSheet, Button, FlatList } from "react-native";
 import { CATEGORIES, MEALS } from "../data/dummy-data";
 import MealItem from "../components/MealItem";
-const CategoryMeals = (props: any) => {  
+
+const CategoryMealsScreen = (props: any) => {
   const catId = props.navigation.getParam("categoryId");
 
   const displayedMeals = MEALS.filter(
@@ -39,7 +40,7 @@ const CategoryMeals = (props: any) => {
     </View>
   );
 };
-CategoryMeals.navigationOptions = (navigationData: any) => {
+CategoryMealsScreen.navigationOptions = (navigationData: any) => {
   const catId = navigationData.navigation.getParam("categoryId");
   const selectedCategory = CATEGORIES.find((cat) => cat.id === catId);
   return {
@@ -56,4 +57,4 @@ const styles = StyleSheet.create({
     margin: 10,
   },
 });
-export default CategoryMeals;
+export default CategoryMealsScreen;

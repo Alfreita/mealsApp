@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const Filters = (props: any) => {
+const FiltersScreen = (props: any) => {
   return (
     <View style={styles.screen}>
       <Text>The Filters Screens</Text>
@@ -15,4 +15,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
-export default Filters;
+export default FiltersScreen;

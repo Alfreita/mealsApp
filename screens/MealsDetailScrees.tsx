@@ -4,7 +4,7 @@ import { MEALS } from "../data/dummy-data";
 import CustomHeaderButtons from "../components/HeaderButtons";
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 
-const MealsDetail = (props: any) => {
+const MealsDetailScreen = (props: any) => {
   const mealId = props.navigation.getParam("mealId");
   const selectedMeal = MEALS.find((meal: any) => meal.id === mealId);
   return (
@@ -13,7 +13,7 @@ const MealsDetail = (props: any) => {
     </View>
   );
 };
-MealsDetail.navigationOptions = (navigationData: any) => {
+MealsDetailScreen.navigationOptions = (navigationData: any) => {
   const mealId = navigationData.navigation.getParam("mealId");
   const selectedMeal = MEALS.find((meal: any) => meal.id === mealId);
   return {
@@ -32,4 +32,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
-export default MealsDetail;
+export default MealsDetailScreen;
