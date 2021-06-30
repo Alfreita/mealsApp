@@ -17,6 +17,12 @@ const stackScreenConfig = {
   headerStyle: {
     backgroundColor: Platform.OS === "android" ? Colors.accentColor : "white",
   },
+  headerTitleStyle: {
+    fontFamily: "open-sans-bold",
+  },
+  headerBackTitleStyle: {
+    fontFamily: "open-sans",
+  },
   headerTintColor: Platform.OS === "android" ? "white" : Colors.primaryColor,
 };
 const MealsNavigation = createStackNavigator(
@@ -108,7 +114,6 @@ const MainNavigator = createDrawerNavigator(
       },
       iconContainerStyle: {
         opacity: 1,
-        
       },
     },
   }
