@@ -6,12 +6,21 @@ import * as Font from "expo-font";
 import MealsNavigation from "./navigation/MealsNavigation";
 import { enableScreens } from "react-native-screens";
 import { LogBox } from "react-native";
+import { createStore, combineReducers } from "redux";
+import { Provider } from "react-redux";
+import mealsReducer from "./redux/reducers/meals";
 
 // Ignore log notification by message
 LogBox.ignoreLogs(["Warning: ..."]);
 
 //Ignore all log notifications
 LogBox.ignoreAllLogs();
+
+const rootReducer = combineReducers({
+  meals: mealsReducer,
+});
+const store = createStore(rootReducer);
+
 enableScreens(true);
 const fetchFont = async () => {
   await Font.loadAsync({
@@ -31,7 +40,11 @@ export default function App() {
       />
     );
   }
-  return <MealsNavigation />;
+  return (
+    <Provider store={store}>
+      <MealsNavigation />
+    </Provider>
+  );
 }
 
 const styles = StyleSheet.create({
