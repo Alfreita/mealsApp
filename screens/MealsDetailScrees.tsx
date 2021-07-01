@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, ScrollView, Image, Text, StyleSheet } from "react-native";
 import { MEALS } from "../data/dummy-data";
 import CustomHeaderButtons from "../components/HeaderButtons";
@@ -18,6 +18,10 @@ const MealsDetailScreen = (props: any) => {
   const mealId = props.navigation.getParam("mealId");
   const avaibleMeals = useSelector((state: any) => state.meals.meals);
   const selectedMeal = avaibleMeals.find((meal: any) => meal.id === mealId);
+
+  // useEffect(() => {
+  //   props.navigation.setParam({ title: selectedMeal.title });
+  // }, [selectedMeal]);
   return (
     <ScrollView>
       <Image source={{ uri: selectedMeal?.imageURL }} style={styles.image} />
@@ -39,10 +43,10 @@ const MealsDetailScreen = (props: any) => {
   );
 };
 MealsDetailScreen.navigationOptions = (navigationData: any) => {
-  const mealId = navigationData.navigation.getParam("mealId");
-  const selectedMeal = MEALS.find((meal: any) => meal.id === mealId);
+  const mealTitle = navigationData.navigation.getParam("mealTitle");
+
   return {
-    headerTitle: selectedMeal?.title,
+    headerTitle: mealTitle,
     headerRight: () => (
       <HeaderButtons HeaderButtonComponent={CustomHeaderButtons}>
         <Item title="Favorite" iconName="ios-star" onPress={() => {}} />
