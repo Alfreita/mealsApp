@@ -4,6 +4,7 @@ import { MEALS } from "../data/dummy-data";
 import CustomHeaderButtons from "../components/HeaderButtons";
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 import DefaultText from "../components/DefaultText";
+import { useSelector } from "react-redux";
 
 const ListItem = (props: any) => {
   return (
@@ -15,7 +16,8 @@ const ListItem = (props: any) => {
 
 const MealsDetailScreen = (props: any) => {
   const mealId = props.navigation.getParam("mealId");
-  const selectedMeal = MEALS.find((meal: any) => meal.id === mealId);
+  const avaibleMeals = useSelector((state: any) => state.meals.meals);
+  const selectedMeal = avaibleMeals.find((meal: any) => meal.id === mealId);
   return (
     <ScrollView>
       <Image source={{ uri: selectedMeal?.imageURL }} style={styles.image} />
