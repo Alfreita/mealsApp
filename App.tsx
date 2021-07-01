@@ -5,6 +5,13 @@ import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
 import MealsNavigation from "./navigation/MealsNavigation";
 import { enableScreens } from "react-native-screens";
+import { LogBox } from "react-native";
+
+// Ignore log notification by message
+LogBox.ignoreLogs(["Warning: ..."]);
+
+//Ignore all log notifications
+LogBox.ignoreAllLogs();
 enableScreens(true);
 const fetchFont = async () => {
   await Font.loadAsync({
